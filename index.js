@@ -21,6 +21,7 @@ async function run() {
     const resumeCollection = client.db("hakim_portfolio").collection("rasume");
     const projectCollection = client.db("hakim_portfolio").collection("project");
 
+    // project get
     app.get("/project", async (req, res) => {
       const query = {};
       const cursor = projectCollection.find(query);
